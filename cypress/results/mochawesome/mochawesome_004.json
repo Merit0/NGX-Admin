@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-31T14:30:43.886Z",
+    "end": "2023-01-31T14:30:48.718Z",
+    "duration": 4832,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa60390c-3c8c-489e-8f49-9b67dff57aa6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bfdcdb3d-2363-485a-9f54-472490270569",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 4732,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "53de14a3-667a-4957-9ff7-a4f584c60532",
+              "parentUUID": "bfdcdb3d-2363-485a-9f54-472490270569",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "53de14a3-667a-4957-9ff7-a4f584c60532"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4732,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

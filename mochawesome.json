@@ -1,0 +1,396 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-18T21:30:14.240Z",
+    "end": "2023-01-31T14:32:24.620Z",
+    "duration": 24132,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "38a5a062-0848-4a99-a52e-cb6275af7327",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "902d3455-a838-4d61-b6c3-8e41d4d4e13a",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 3353,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "75e308e8-6ffe-44e6-823a-9da2618e83e2",
+              "parentUUID": "902d3455-a838-4d61-b6c3-8e41d4d4e13a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75e308e8-6ffe-44e6-823a-9da2618e83e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3353,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cfb82041-c81c-4477-b3a4-be2f2b5a46b4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "651b1a30-6ec7-43a4-91e8-8c44e2acbf57",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 4503,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "bfbd0b9b-2bee-4402-886b-bc9ea6d32d2e",
+              "parentUUID": "651b1a30-6ec7-43a4-91e8-8c44e2acbf57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bfbd0b9b-2bee-4402-886b-bc9ea6d32d2e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4503,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cfa1da87-4acc-4eb7-bdf1-dc89d23bcc5a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cd1c5035-fd20-4def-8a55-4bc08f070abf",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 4038,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "92aea340-8701-45f1-9117-f67d7b698a53",
+              "parentUUID": "cd1c5035-fd20-4def-8a55-4bc08f070abf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92aea340-8701-45f1-9117-f67d7b698a53"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4038,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "aa60390c-3c8c-489e-8f49-9b67dff57aa6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bfdcdb3d-2363-485a-9f54-472490270569",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 4732,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "53de14a3-667a-4957-9ff7-a4f584c60532",
+              "parentUUID": "bfdcdb3d-2363-485a-9f54-472490270569",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "53de14a3-667a-4957-9ff7-a4f584c60532"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4732,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "21a88649-8dc4-453d-a978-69261dae1ad8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de4d898e-180f-41c6-9f4a-c4f07e836e5e",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 3968,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "2c65f13b-987a-4d7b-a594-1db0e0fc5ccb",
+              "parentUUID": "de4d898e-180f-41c6-9f4a-c4f07e836e5e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c65f13b-987a-4d7b-a594-1db0e0fc5ccb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fed426a7-9f83-4055-8d29-53e25f8674e4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.cy.js",
+      "file": "cypress\\e2e\\firstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1afd17e6-4203-4adc-81a7-ae7565be1254",
+          "title": "Our Login User Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Overlays",
+              "fullTitle": "Our Login User Suite Verify Overlays",
+              "timedOut": null,
+              "duration": 3538,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// ----------------------------------------------------------------------------- OK\n// cy.contains('Tables & Data').click()\n// cy.contains('Smart Table').click()\n// cy.contains('nb-card', 'Smart Table').within(table => {\n//     cy.wrap(table)\n//         .find('tbody tr')\n//         .then(rows => {\n//             cy.wrap(rows)\n//                 .first()\n//                 .find('.nb-trash')\n//                 .click()\n//         })\n//     })\n//     cy.on('window:confirm', (confirm) => {\n//         expect(confirm).to.equal('Are you sure you want to delete?')\n//     })\n// ----------------------------------------------------------------------------- OK\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.contains('nb-card', 'Smart Table').within(table => {\n  cy.wrap(table).find('tbody tr').then(rows => {\n    cy.wrap(rows).first().find('.nb-trash').click().then(() => {\n      expect(stub.getCall(0)).to.be.calledWith('Are you sure you want to delete?');\n    });\n  });\n}); // ----------------------------------------------------------------------------- OK\n//     cy.contains('Tables & Data').click()\n//     cy.contains('Smart Table').click()\n//     cy.contains('nb-card', 'Smart Table').within(table => {\n//         cy.wrap(table)\n//             .find('tbody tr')\n//             .then(rows => {\n//                 cy.wrap(rows)\n//                     .first()\n//                     .find('.nb-trash')\n//                     .click().then(() => {\n//                         cy.on('window:confirm', () => false)\n//                     })\n//             })\n//     })",
+              "err": {},
+              "uuid": "d606e9e7-7ce0-48eb-bcea-e4b97f5efb88",
+              "parentUUID": "1afd17e6-4203-4adc-81a7-ae7565be1254",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d606e9e7-7ce0-48eb-bcea-e4b97f5efb88"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3538,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
